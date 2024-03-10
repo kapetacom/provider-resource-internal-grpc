@@ -1,0 +1,36 @@
+kind: core/resource-type-internal
+metadata:
+  name: kapeta/resource-type-grpc-api
+  title: GRPC API
+  description: Provides GRPC API in your plans
+  visibility: public
+spec:
+  ports:
+    - name: grpc
+      type: http
+  schema:
+    type: object
+    required:
+      - port
+    properties:
+      port:
+        $ref: /core/port
+
+---
+kind: core/resource-type-internal
+metadata:
+  name: kapeta/resource-type-grpc-client
+  title: GRPC Client
+  description: Provides GRPC Clients in your plans
+  visibility: public
+spec:
+  ports:
+    - name: grpc
+      type: http
+  schema:
+    type: object
+    required:
+      - port
+    properties:
+      port:
+        $ref: /core/port
